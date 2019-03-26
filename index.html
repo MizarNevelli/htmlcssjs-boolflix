@@ -19,7 +19,15 @@
     <script src="script.js" charset="utf-8"></script>
 
     <script id="entry-template" type="text/x-handlebars-template">
-      <li> {{title}} - {{originalTitle}} - {{language}} - {{vote}} </li>
+      <ul>
+        <li> Title: {{ title }}  </li>
+        <li> Originial Title: {{ originalTitle }} </li>
+        <li> Originial Language: {{ language }}  </li>
+        <li> Vote: {{{ vote }}}
+          
+        </li>
+      </ul>
+      <hr>
     </script>
 
     <title>Boolflix</title>
@@ -30,9 +38,9 @@
     <h1>Boolflix</h1>
     <input id="input" type="text"><button type="button" name="button">Search</button>
 
-    <ul id="ul">
+    <div id="ul">
 
-    </ul>
+    </div>
 
   </body>
 </html>
