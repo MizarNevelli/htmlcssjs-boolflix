@@ -1,0 +1,63 @@
+function printInfo(title, originalTitle, language, vote){
+
+  var ul = $("#ul");
+  var data = {
+    title: title,
+    originalTitle : originalTitle,
+    language: language,
+    vote: vote
+  }
+
+  var template = $("#entry-template").html();
+  var compiled = Handlebars.compile(template);
+  var final = compiled(data);
+  ul.append(final)
+
+}
+
+function getData (){
+
+  var query = $("#input").val();
+
+  var outdata = {
+    api_key: "0b65689c44315b59b457fc2369ad89c7",
+    language: "it-IT",
+    query: query,
+  }
+
+  $.ajax({
+
+    url: "https://api.themoviedb.org/3/search/movie",
+    method: "GET",
+    data: outdata,
+    success: function(data){
+
+      var results = data.results;
+      var originalTitles = originalTitle
+
+      for (var i = 0; i < results.length; i++) {
+        var title = results[i].title;
+        var originalTitle = results[i].original_title;
+        var language = results[i].original_language;
+        var vote = results[i].vote_average;
+
+        console.log(originalTitle);
+        printInfo(title, originalTitle, language, vote)
+      }
+    },
+    error: function(request, state, error){}
+
+  })
+}
+
+
+
+function init() {
+
+  $("button").click(getData);
+
+
+
+}
+
+$(document).ready(init)
