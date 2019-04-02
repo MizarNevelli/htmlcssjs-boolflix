@@ -90,6 +90,7 @@ ul{
   border-radius: 20px;
   color: white;
   height: 30px;
+  width: 200px;
   outline: none;
   padding: 2px;
   position: absolute;
@@ -129,4 +130,7 @@ ul{
 }
 #user-btn:hover{
   color: white;
+}
+.category{
+  display: none;
 }

@@ -134,6 +134,8 @@ function getData (){
     },
     error: function(request, state, error){}
   })
+
+  $(".category").show();
 }
 
 function showSearchInput(){
