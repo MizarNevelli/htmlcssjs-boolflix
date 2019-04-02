@@ -93,8 +93,11 @@ function getData (){
         var imgUrl = results[i].poster_path;
         var imgUrlFinal = "https://image.tmdb.org/t/p/w185" + imgUrl;
 
+        if (imgUrl == null) {
+          imgUrlFinal = "http://www.prolococisanobg.it/wp-content/uploads/2017/10/Non-disponibile-_04-247x300.jpg"
+        }
+
         vote = Math.floor((vote)/2);
-        console.log(imgUrlFinal);
 
         printInfoFilm(title, originalTitle, language, vote, imgUrlFinal);
 
@@ -120,8 +123,11 @@ function getData (){
         var vote = results[i].vote_average;
         var imgUrl = results[i].poster_path;
         var imgUrlFinal = "https://image.tmdb.org/t/p/w185" + imgUrl;
+
+        if (imgUrl == null) {
+          imgUrlFinal = "http://www.prolococisanobg.it/wp-content/uploads/2017/10/Non-disponibile-_04-247x300.jpg"
+        }
         vote = Math.floor((vote)/2)
-        console.log(name);
 
         printInfoTV(name, originalName, language, vote, imgUrlFinal)
       }
@@ -130,16 +136,40 @@ function getData (){
   })
 }
 
+function showSearchInput(){
+  var input = $("#input");
+  input.hide();
+  var icon = $(".fa-search");
 
+  icon.click(function(){
+    input.show("slide", { direction: "right" }, 400);
+  });
+
+}
+
+function showInfoBox(){
+
+  var boxInfo = $(".info-film")
+  var boxes =  $(".film");
+  boxInfo.hide();
+  boxes.hover(function(){
+    boxInfo.show();
+    console.log("we");
+  })
+}
 
 function init() {
 
-  $("button").click(function(){
+  $("#input").keyup(function(e){
+    if (e.which == 13) {
 
     getData();
     clearClick();
-
+  }
   });
+
+  showSearchInput();
+  showInfoBox()
 
 }
 

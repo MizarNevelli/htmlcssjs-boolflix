@@ -3,12 +3,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Montserrat', sans-serif;
+
 }
 ul{
   border-bottom: 1px solid black;
 }
 .container {
-  width: 90vw;
+  width: 85vw;
   height: 90vh;
   display: flex;
   flex-direction: column;
@@ -21,31 +23,85 @@ ul{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #141414;
+
 }
 #film{
   overflow: auto;
   display: flex;
 }
 #film::-webkit-scrollbar {
-display: none;
+  display: none;
 }
 #tv{
   overflow: auto;
   display: flex;
 }
 #tv::-webkit-scrollbar {
-display: none;
+  display: none;
 }
 .film, .tv{
   position: relative;
   height: 40vh;
   min-width: 200px;
+  margin: 10px;
 }
 .film p, .tv p{
   color: white;
 }
-.film img, .tv img{
+.info-film, .film img, .tv img{
   position: absolute;
   top: 0;
-  z-index: -100;
+  width: 200px;
+}
+.topbar{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  width: 85vw;
+  height: 10vh;
+}
+#logo{
+  width: 140px;
+  height: 80px;
+}
+.img-film{
+  height: 40vh;
+  min-width: 200px;
+}
+.fa-search{
+  color: white;
+  font-size: 170%;
+}
+.search-film button{
+  background: transparent;
+  border: none;
+  position: absolute;
+  right: 15px;
+  top: 60%;
+  outline: none;
+  cursor: pointer;
+
+}
+#input{
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 20px;
+  color: white;
+  height: 30px;
+  outline: none;
+  padding: 2px;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+}
+.search-film{
+  position: relative;
+  height: 100%;
+}
+.info-film{
+  height: 100%;
+  padding: 5px;
+  
 }

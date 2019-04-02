@@ -5,12 +5,15 @@
     <meta charset="utf-8">
     <!-- jquery -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
     <!-- MOMENT -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Margarine" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="main.css">
+    <!--  -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
     <!-- handlebars -->
@@ -20,21 +23,27 @@
 
     <script id="entry-template" type="text/x-handlebars-template">
       <div class = "film">
-        <p> Title: {{ title }}  </p>
-        <p> Originial Title: {{ originalTitle }} </p>
-        <p> Originial Language: {{{ language }}}  </p>
-        <p> Vote: {{{ vote }}} </p>
         <img src ="{{ imgUrl }}" class="img-film">
+        <div class="info-film">
+          <p> Title: {{ title }}  </p>
+          <p> Originial Title: {{ originalTitle }} </p>
+          <p> Originial Language: {{{ language }}}  </p>
+          <p> Vote: {{{ vote }}} </p>
+        </div>
       </div>
     </script>
 
     <script id="entry-template-TV" type="text/x-handlebars-template">
       <div class="tv">
-        <p> Title: {{ name }}  </p>
-        <p> Originial Title: {{ originalName }} </p>
-        <p> Originial Language: {{{ language }}}  </p>
-        <p> Vote: {{{ vote }}} </p>
         <img src ="{{ imgTVUrl }}" class="img-film">
+        
+        <div class="info-film">
+          <p> Title: {{ name }}  </p>
+          <p> Originial Title: {{ originalName }} </p>
+          <p> Originial Language: {{{ language }}}  </p>
+          <p> Vote: {{{ vote }}} </p>
+        </div>
+
 
       </div>
 
@@ -47,8 +56,14 @@
 
     <div class="main-cont">
 
-      <h1>Boolflix</h1>
-      <input id="input" type="text"><button type="button" name="button">Search</button>
+      <div class="topbar">
+        <img id="logo" src="logo.png" alt="">
+        <div class="search-film">
+          <input id="input" type="text">
+          <button type="button" name="button"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+
 
       <div class="container">
         <div id="film">
