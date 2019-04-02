@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
-
 }
 ul{
   border-bottom: 1px solid black;
@@ -17,6 +16,7 @@ ul{
   overflow: auto;
   justify-content: space-around;
   flex-wrap: nowrap;
+  color: white;
 }
 .main-cont{
   display: flex;
@@ -79,7 +79,7 @@ ul{
   border: none;
   position: absolute;
   right: 15px;
-  top: 60%;
+  top: 50%;
   outline: none;
   cursor: pointer;
 
@@ -94,7 +94,7 @@ ul{
   padding: 2px;
   position: absolute;
   right: 5px;
-  top: 50%;
+  top: 40%;
 }
 .search-film{
   position: relative;
@@ -103,5 +103,30 @@ ul{
 .info-film{
   height: 100%;
   padding: 5px;
-  
+  opacity: 0;
+  transition: .5s ease;
+}
+.film:hover .info-film{
+  opacity: 1;
+}
+.tv:hover .info-film{
+  opacity: 1;
+}
+
+.film:hover .img-film{
+  opacity: 0.2;
+}
+.tv:hover .img-film{
+  opacity: 0.2;
+}
+#user-btn{
+  background: transparent;
+  padding: 5px;
+  color: white;
+  width: 150px;
+  height: 30px;
+  color: grey;
+}
+#user-btn:hover{
+  color: white;
 }

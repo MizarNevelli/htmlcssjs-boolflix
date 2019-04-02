@@ -1,7 +1,7 @@
 
 
 function clearClick(){
-    $(".film, .tv").hide();
+    $(".film, .tv, #user-btn, .container>h1").hide();
 }
 
 function printInfoFilm(title, originalTitle, language, vote, imgUrlFinal){
@@ -142,21 +142,21 @@ function showSearchInput(){
   var icon = $(".fa-search");
 
   icon.click(function(){
-    input.show("slide", { direction: "right" }, 400);
+    input.toggle("slide", { direction: "right" }, 400);
   });
 
 }
 
-function showInfoBox(){
-
-  var boxInfo = $(".info-film")
-  var boxes =  $(".film");
-  boxInfo.hide();
-  boxes.hover(function(){
-    boxInfo.show();
-    console.log("we");
-  })
-}
+// function showInfoBox(){
+//
+//   var boxInfo = $(".info-film")
+//   var boxes =  $(".film");
+//   boxInfo.hide();
+//   boxes.hover(function(){
+//     boxInfo.show();
+//     console.log("we");
+//   })
+// }
 
 function init() {
 
@@ -169,7 +169,7 @@ function init() {
   });
 
   showSearchInput();
-  showInfoBox()
+  // showInfoBox()
 
 }
 
