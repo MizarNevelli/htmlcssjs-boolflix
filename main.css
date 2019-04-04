@@ -24,7 +24,14 @@ ul{
   align-items: center;
   justify-content: center;
   background-color: #141414;
+  flex-wrap: wrap;
 
+}
+.init{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 #film{
   overflow: auto;
@@ -67,7 +74,7 @@ ul{
   height: 80px;
 }
 .img-film{
-  height: 35vh;
+  height: 40vh;
   min-width: 200px;
 }
 .fa-search{
@@ -92,7 +99,7 @@ ul{
   height: 30px;
   width: 200px;
   outline: none;
-  padding: 2px;
+  padding: 5px;
   position: absolute;
   right: 5px;
   top: 40%;
@@ -115,10 +122,10 @@ ul{
 }
 
 .film:hover .img-film{
-  opacity: 0.2;
+  opacity: 0.15;
 }
 .tv:hover .img-film{
-  opacity: 0.2;
+  opacity: 0.15;
 }
 #user-btn{
   background: transparent;
@@ -127,6 +134,7 @@ ul{
   width: 150px;
   height: 30px;
   color: grey;
+  margin: 20px;
 }
 #user-btn:hover{
   color: white;

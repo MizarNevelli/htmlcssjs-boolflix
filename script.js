@@ -1,7 +1,7 @@
 
 
 function clearClick(){
-    $(".film, .tv, #user-btn, .container>h1").hide();
+    $(".film, .tv, .init").hide();
 }
 
 function printInfoFilm(title, originalTitle, language, vote, imgUrlFinal){
