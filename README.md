@@ -12,5 +12,11 @@ _ Details _
 - The movies data are retrieved from themoviedb.org Database through an API call
 - The movie cards, advanced info panel, and the pages display the managed by the use of Handlebars.js.
 
+##NOTE!
+The API call to the database requires an api_key provided by movie.org upon registration to the website. If the website doesn't showcase results properly it might be because the key has been deactivated.
+
+*If so you can use your own api_key by sobstituting it in the script.js*
+
+
 
 
