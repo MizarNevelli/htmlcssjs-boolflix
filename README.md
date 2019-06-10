@@ -18,7 +18,7 @@ The API call to the database requires an api_key provided by movie.org upon regi
 *If so you can use your own api_key by sobstituting it in the script.js*
 
 ## Preview:
-![boolzap4gif](https://user-images.githubusercontent.com/46935430/59220618-b4d22580-8bc5-11e9-8f57-c57f63e3fd9a.gif)
+![Senza-nome](https://user-images.githubusercontent.com/46935430/59221041-a89a9800-8bc6-11e9-9ce3-c83acb27e90c.gif)
 
 
 
