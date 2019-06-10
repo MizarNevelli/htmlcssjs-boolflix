@@ -6,7 +6,7 @@ HTML, CSS, Flex,
 Javascript, Jquery, AJAX, API, Hadlebars.js, 
 themoviedb.org Database.
 
-# Functionalities
+## Functionalities
 Gives the user the possibility to search for movies and tv-series by title. The results are then organized by pages and divided into two main folders (movies and tv-series).
 _ Details _
 - The movies data are retrieved from themoviedb.org Database through an API call
@@ -17,7 +17,7 @@ The API call to the database requires an api_key provided by movie.org upon regi
 
 *If so you can use your own api_key by sobstituting it in the script.js*
 
-## Preview:
+### Preview:
 ![Senza-nome](https://user-images.githubusercontent.com/46935430/59221041-a89a9800-8bc6-11e9-9ce3-c83acb27e90c.gif)
 
 
