@@ -3,8 +3,8 @@ A Movie and Tv-show searching website with a design inspired by Netflix.
 
 ## Technologies
 HTML, CSS, Flex, 
-Javascript, Jquery, AJAX, API, Hadlebars.js, 
-themoviedb.org Database.
+Javascript, Jquery, Jquery UI AJAX, API, Hadlebars.js, 
+themoviedb.org Database,.
 
 ## Functionalities
 Gives the user the possibility to search for movies and tv-series by title. The results are then organized by pages and divided into two main folders (movies and tv-series).
