@@ -1,5 +1,5 @@
 # Boolflix
-A Movie and Tv-show searching website with a design inspired by Netflix.
+A Movie and Tv-show searching engine with a design inspired by Netflix.
 
 ## Technologies
 HTML, CSS, Flex, 
